@@ -1,12 +1,18 @@
+html{
+    height: 100%;
+}
+
 body{
     background-color: gray;
+    min-height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-div.container{
+.container{
     background-color: pink;
     width: 1000px;
     height: 1000px;
@@ -20,5 +26,4 @@ div.container{
     width: 50px;
     margin: 1px;
     display: inline-block;
-    float: left;
 }
