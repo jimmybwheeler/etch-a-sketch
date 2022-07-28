@@ -1,0 +1,24 @@
+body{
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.container{
+    background-color: pink;
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+}
+
+.squares{
+    border: solid red 2px;
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+    display: inline-block;
+    float: left;
+}
