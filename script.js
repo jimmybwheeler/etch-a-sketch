@@ -12,17 +12,8 @@ for(let x = 0; x < 16; x++){
     }
 }
 
-function getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
 //event listeners
-squares.addEventListener("mouseover", (e) => {
-    let newColor = getRandomColor();
-    return e.target.style.backgroundColor = newColor;
+squares.addEventListener("mouseover", () => {
+    squares.style.background = "black";
 });
+
