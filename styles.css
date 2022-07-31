@@ -21,7 +21,15 @@ body{
     flex-wrap: wrap;
 }
 
-.squaresCl{
+.squares{
     border: solid lightgray 2px;
     margin: 1px;
+    background-color: lightgray;
+    width: 50px;
+    height: 50px;
 }
+
+/*.squares:hover {
+    background-color: red;
+    transition: background-color .5s;
+}*/
