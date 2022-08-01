@@ -1,9 +1,21 @@
+* {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: gray;
     border: solid red 2px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: solid green 2px;
+    width: 900px;
+    height: 900px;
 }
 
 .squares {
