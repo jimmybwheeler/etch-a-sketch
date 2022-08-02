@@ -5,7 +5,7 @@ function createGrid(gridSize){
         grid.classList.add("squares");
         grid.style.height = "50px";
         grid.style.width = "50px";
-        grid.style.border = "solid black 2px";
+        grid.style.border = "solid black .01px";
         main.appendChild(grid);
     }
 }
