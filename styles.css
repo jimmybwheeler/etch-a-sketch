@@ -15,10 +15,11 @@ body {
 .container {
     display: flex;
     border: solid green 2px;
-    /*width: 900px;
-    height: 900px;*/
+    flex-wrap: wrap;
 }
 
 .squares {
-    flex: 1;
+    height: 50px;
+    width: 50px;
+    border: solid black 0.1px;
 }
