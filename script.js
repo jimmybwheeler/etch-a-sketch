@@ -24,3 +24,12 @@ function makeColumns(cellNum){
         }
     }
 }
+
+function changeColor(){
+    for(let i = 0; i < 100; i++){
+        gridRow[i].className = "newColor";
+        cells[i].className = "newColor";
+    }
+}
+
+cells[0].addEventListener("mouseover", changeColor);
