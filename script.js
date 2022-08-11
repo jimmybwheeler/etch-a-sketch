@@ -26,10 +26,10 @@ function makeColumns(cellNum){
 }
 
 function changeColor(){
-    for(let i = 0; i < 100; i++){
-        gridRow[i].className = "newColor";
-        cells[i].className = "newColor";
-    }
+    cells.style.changeColor = "red";
 }
 
-cells[0].addEventListener("mouseover", changeColor);
+console.log(rows);
+console.log(cells);
+
+cells.addEventListener("mouseover", changeColor);
