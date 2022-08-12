@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
+
 
 defaultGrid();
 
@@ -25,11 +25,17 @@ function makeColumns(cellNum){
     }
 }
 
-function changeColor(){
-    cells.style.changeColor = "red";
+draw();
+
+function draw(){
+    let cells = document.getElementsByClassName("cell");
+    for(let i = 0; i < cells.length; i++){
+        cells[i].addEventListener("mouseover", changeColor);
+    }
 }
 
-console.log(rows);
-console.log(cells);
+function changeColor(){
+    this.style.backgroundColor = "red";
+}
 
-cells.addEventListener("mouseover", changeColor);
+
