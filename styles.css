@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(17, 148, 0);
-    border: solid red 2px;
+    /*border: solid red 2px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,12 +12,12 @@ html, body {
 
 }
 
-.resetBtn{
-    
+#resetBtn{
+    margin-bottom: 10px;
 }
 
 .container {
-    border: solid rgb(0, 106, 124) 10px;
+    border: solid rgb(0, 106, 124) 5px;
     background-color: rgb(21, 184, 0);
     border-radius: 5px;
     padding: 1px;
