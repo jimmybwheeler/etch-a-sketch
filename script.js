@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
-let rows = document.getElementsByClassName("gridRow");
+const rows = document.getElementsByClassName("gridRow");
 const resetBtn = document.getElementById("resetBtn");
+const changeGrid = document.getElementById("changeGrid");
 
 
 defaultGrid();
@@ -8,6 +9,14 @@ defaultGrid();
 function defaultGrid(){
     makeRows(16);
     makeColumns(16);
+}
+
+customGrid();
+
+function customGrid(){
+    changeGrid.addEventListener("click", () => {
+        
+    });
 }
 
 function makeRows(rowNum){
