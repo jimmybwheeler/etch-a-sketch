@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 let rows = document.getElementsByClassName("gridRow");
+const resetBtn = document.getElementById("resetBtn");
 
 
 defaultGrid();
@@ -38,4 +39,11 @@ function changeColor(){
     this.style.backgroundColor = "red";
 }
 
+function resetColor(){
+    let cells = document.getElementsByClassName("cell");
+    for(let i = 0; i < cells.length; i++){
+        cells[i].style.backgroundColor = "green";
+    }
+}
 
+resetBtn.addEventListener("click", resetColor);
