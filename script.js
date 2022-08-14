@@ -22,6 +22,9 @@ function customGrid(){
             let errorDiv = document.createElement("div");
             errorDiv.textContent = "Please enter a number between 1 and 100.";
             error.appendChild(errorDiv);
+        } else {
+            makeRows(userInput);
+            makeColumns(userInput);
         }
     });
 }
