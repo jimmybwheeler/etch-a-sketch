@@ -3,6 +3,7 @@ const rows = document.getElementsByClassName("gridRow");
 const resetBtn = document.getElementById("resetBtn");
 const changeGrid = document.getElementById("changeGrid");
 const error = document.querySelector(".error");
+const userInput = document.getElementById("input");
 
 
 defaultGrid();
@@ -22,7 +23,6 @@ function customGrid(){
             errorDiv.textContent = "Please enter a number between 1 and 100.";
             error.appendChild(errorDiv);
         }
-        document.getElementById("changeGrid").onclick = null;
     });
 }
 
@@ -55,11 +55,13 @@ function changeColor(){
     this.style.backgroundColor = "red";
 }
 
-function resetColor(){
+function resetGrid(){
     let cells = document.getElementsByClassName("cell");
     for(let i = 0; i < cells.length; i++){
         cells[i].style.backgroundColor = "green";
     }
+    error.firstChild.textContent = "";
+    userInput.value = "";
 }
 
-resetBtn.addEventListener("click", resetColor);
+resetBtn.addEventListener("click", resetGrid);
