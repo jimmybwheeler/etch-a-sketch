@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const rows = document.getElementsByClassName("gridRow");
 const resetBtn = document.getElementById("resetBtn");
 const changeGrid = document.getElementById("changeGrid");
+const error = document.querySelector(".error");
 
 
 defaultGrid();
@@ -15,7 +16,13 @@ customGrid();
 
 function customGrid(){
     changeGrid.addEventListener("click", () => {
-        
+        const userInput = document.getElementById("input").value;
+        if(userInput < 0 || userInput > 100 || userInput == NaN){
+            let errorDiv = document.createElement("div");
+            errorDiv.textContent = "Please enter a number between 1 and 100.";
+            error.appendChild(errorDiv);
+        }
+        document.getElementById("changeGrid").onclick = null;
     });
 }
 
