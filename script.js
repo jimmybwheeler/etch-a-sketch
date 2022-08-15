@@ -3,7 +3,6 @@ const rows = document.getElementsByClassName("gridRow");
 const resetBtn = document.getElementById("resetBtn");
 const changeGrid = document.getElementById("changeGrid");
 const error = document.querySelector(".error");
-const userInput = document.getElementById("input");
 
 
 defaultGrid();
@@ -17,12 +16,12 @@ customGrid();
 
 function customGrid(){
     changeGrid.addEventListener("click", () => {
-        const userInput = document.getElementById("input").value;
-        if(userInput < 0 || userInput > 100 || userInput == NaN){
-            let errorDiv = document.createElement("div");
-            errorDiv.textContent = "Please enter a number between 1 and 100.";
-            error.appendChild(errorDiv);
+        let errorDiv = document.createElement("div");
+        const userInput = prompt("Enter a number between 1 and 100.");
+        if(userInput < 0 || userInput > 100 || userInput == NaN || !parseInt(userInput)){
+            error.textContent = "Please enter a number between 1 and 100.";
         } else {
+            error.textContent = "";
             makeRows(userInput);
             makeColumns(userInput);
         }
@@ -45,6 +44,7 @@ function makeColumns(cellNum){
     }
 }
 
+// when user mouses over the squares it changes the colors
 draw();
 
 function draw(){
